@@ -5,7 +5,6 @@ project (dt)
 include_directories(PUBLIC include)
 
 add_library(dt src/dt.c src/pmgr.c)
-set_target_properties(dt PROPERTIES PUBLIC_HEADER "include/dt.h")
 install(FILES include/dt.h DESTINATION include/dt)
 install(TARGETS dt DESTINATION lib)
 
