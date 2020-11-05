@@ -17,9 +17,11 @@
 // ========== LIB ==========
 
 #ifdef DT_IO
-#   include <stdio.h>
-#   define LOG(str, args...) do { printf(str "\n", ##args); } while(0)
-#   define ERR(str, args...) do { fprintf(stderr, "\x1b[1;91m" str "\x1b[0m\n", ##args); } while(0)
+#include <stdio.h>
+#define LOG(str, args...) do { printf(str "\n", ##args); } while(0)
+#define ERR(str, args...) do { fprintf(stderr, "\x1b[1;91m" str "\x1b[0m\n", ##args); } while(0)
+#else
+#define LOG(str, args...)
 #endif
 
 #ifdef ERR
@@ -41,6 +43,7 @@
             goto out; \
         } \
     } while(0)
+#define ERR(str, args...)
 #endif
 
 int file2mem(const char *path, int (*func)(void*, size_t, void*), void *arg);
