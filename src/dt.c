@@ -16,7 +16,7 @@
 #include <sys/mman.h>           // mmap, munmap
 #include <sys/stat.h>           // fstat
 
-#include "dt.h"
+#include "../include/dt.h"
 
 // ========== IO ==========
 

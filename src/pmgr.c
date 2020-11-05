@@ -12,7 +12,7 @@
 #include <stdint.h>
 #include <string.h>             // strcmp, strncmp, strlen
 
-#include "dt.h"
+#include "../include/dt.h"
 
 // ========== PMGR ==========
 
